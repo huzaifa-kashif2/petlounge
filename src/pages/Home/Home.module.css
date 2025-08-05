@@ -1,0 +1,14 @@
+.homeContainer {
+  padding: 2rem;
+}
+
+.welcomeText {
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
