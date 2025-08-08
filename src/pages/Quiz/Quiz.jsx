@@ -7,4 +7,4 @@ export default function Quiz() {
       <p>Take our fun quiz to discover your pet’s unique personality type! Is your dog a playful explorer or a relaxed nap king? This interactive quiz is designed for all pet lovers to enjoy with their furry companions!</p>
     </div>
   );
-}A
+}
