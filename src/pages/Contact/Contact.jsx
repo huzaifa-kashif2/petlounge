@@ -13,7 +13,7 @@ import {
 export default function Contact() {
   return (
     <section className={styles.contactCard}>
-      <img src={logo} alt="Logo" className={styles.logo} /> {/* Replace with your own logo */}
+      <img src={logo} alt="Logo" className={styles.logo} /> 
       <h2 className={styles.title}>Bennys Pets Lounge</h2>
 
       <div className={styles.info}>

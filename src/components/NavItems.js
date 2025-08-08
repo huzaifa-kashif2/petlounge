@@ -1,4 +1,3 @@
-// src/components/navItems.js
 const navItems = [
   { name: "Home", path: "/" },
   { name: "Services", path: "/services" },

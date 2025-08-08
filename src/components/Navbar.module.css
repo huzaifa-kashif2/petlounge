@@ -28,7 +28,7 @@
   width: 25px;
   height: 18px;
   cursor: pointer;
-  z-index: 11; /* Ensure it's above the nav links */
+  z-index: 11;
 }
 
 .hamburger span {
@@ -64,7 +64,6 @@
   padding-bottom: 4px;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
   .hamburger {
     display: flex;

@@ -60,12 +60,12 @@ select:focus {
 .timeFields {
   display: flex;
   gap: 0.5rem;
-  flex-wrap: wrap; /* allows wrapping if necessary but keeps them on the same line on most screens */
+  flex-wrap: wrap; 
 }
 
 .timeFields select {
-  flex: 1; /* make all select fields share equal space */
-  min-width: 80px; /* ensures they don’t shrink too small */
+  flex: 1; 
+  min-width: 80px; 
 }
 
 button {
@@ -89,7 +89,6 @@ button:hover {
   justify-content: flex-start;
 }
 
-/* 📱 Mobile responsiveness */
 @media (max-width: 600px) {
   .container {
     padding: 1.5rem 1rem;
@@ -115,7 +114,6 @@ button:hover {
     padding: 0.65rem;
   }
 
-  /* Prevent timeFields from stacking on small screens */
   .timeFields {
     flex-direction: row;
     flex-wrap: wrap;

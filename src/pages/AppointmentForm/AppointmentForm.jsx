@@ -34,7 +34,6 @@ export default function ContactForm() {
       return;
     }
 
-    // API call / form handling here
     alert("Form submitted!");
   };
 

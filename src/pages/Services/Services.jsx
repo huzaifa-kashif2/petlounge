@@ -1,4 +1,3 @@
-// Example: src/pages/Services/Services.jsx
 import styles from './Services.module.css';
 
 const Services = () => {
