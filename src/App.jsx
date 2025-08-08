@@ -8,6 +8,7 @@ import TipsAndCare from "./pages/TipsAndCare/TipsAndCare";
 import Quiz from "./pages/Quiz/Quiz";
 import Contact from "./pages/Contact/Contact";
 import AppointmentForm from "./pages/AppointmentForm/AppointmentForm";
+import Testimonials from "./pages/Testimonials/Testimonials";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/paw-wall" element={<PawWall />} />
         <Route path="/tips" element={<TipsAndCare />} />
         <Route path="/quiz" element={<Quiz />} />
+        <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/appointment-form" element={<AppointmentForm />} />
       </Routes>
