@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./Contact.module.css";
-import logo from "../../assets/logo.png"
+import styles from "../styles/Contact.module.css";
+import logo from "../assets/logo.png"
 import {
   FaPhone,
   FaGlobe,

@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home/Home";
-import Services from "./pages/Services/Services";
-import AboutUs from "./pages/AboutUs/AboutUs";
-import PawWall from "./pages/PawWall/PawWall";
-import TipsAndCare from "./pages/TipsAndCare/TipsAndCare";
-import Quiz from "./pages/Quiz/Quiz";
-import Contact from "./pages/Contact/Contact";
-import AppointmentForm from "./pages/AppointmentForm/AppointmentForm";
-import Testimonials from "./pages/Testimonials/Testimonials";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import AboutUs from "./pages/AboutUs";
+import PawWall from "./pages/PawWall";
+import TipsAndCare from "./pages/TipsAndCare";
+import Quiz from "./pages/Quiz";
+import Contact from "./pages/Contact";
+import AppointmentForm from "./pages/AppointmentForm";
+import Testimonials from "./pages/Testimonials";
 
 function App() {
   return (

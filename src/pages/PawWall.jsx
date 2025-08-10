@@ -1,4 +1,4 @@
-import styles from "./PawWall.module.css";
+import styles from "../styles/PawWall.module.css";
 
 export default function PawWall() {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Quiz.module.css";
+import styles from "../styles/Quiz.module.css";
 
 export default function Quiz() {
   const questions = [

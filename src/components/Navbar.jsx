@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import styles from "./Navbar.module.css";
+import styles from "../styles/Navbar.module.css";
 import navItems from "./NavItems";
 import logo from "../assets/logo.png";
 

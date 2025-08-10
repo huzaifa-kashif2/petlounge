@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import styles from "./AppointmentForm.module.css";
+import styles from "../styles/AppointmentForm.module.css";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({

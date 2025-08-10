@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./Testimonials.module.css";
+import styles from "../styles/Testimonials.module.css";
 
 const testimonialsData = [
   {

@@ -1,4 +1,4 @@
-import styles from "./TipsAndCare.module.css";
+import styles from "../styles/TipsAndCare.module.css";
 
 export default function TipsAndCare() {
   return (
