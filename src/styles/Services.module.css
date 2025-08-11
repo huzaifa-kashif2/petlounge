@@ -1,6 +1,92 @@
+.servicesContainer {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfcfb;
+  padding-bottom: 4rem;
+}
 
-.container {
+.header {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #b38867;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 8%;
+}
+
+.serviceCard {
+  background: white;
+  border-radius: 12px;
   padding: 2rem;
-  background-color: #F0E4D3;
-  color: #3d3d3d;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.serviceCard h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.serviceCard p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.ctaSection {
+  text-align: center;
+  padding: 4rem 1rem 0;
+  background: linear-gradient(to bottom, #fff7f0, #fff);
+  padding-bottom: 20px;
+}
+
+.ctaSection h2 {
+  font-size: 1.8rem;
+  color: #b38867;
+  margin-bottom: 1rem;
+}
+
+.ctaSection p {
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.ctaButton {
+  background: #b38867;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #9a7353;
 }
