@@ -7,7 +7,8 @@ const navItems = [
   { name: "Tips & Care", path: "/tips" },
   { name: "Quiz", path: "/quiz" },
   { name: "Contact", path: "/contact" },
-  { name: "Appointment Form", path: "/appointment-form" }
+  { name: "Appointment Form", path: "/appointment-form" },
+  {name:"Boarding",path:"/boarding"}
 ];
 
 export default navItems;

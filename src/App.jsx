@@ -10,6 +10,7 @@ import Quiz from "./pages/Quiz";
 import Contact from "./pages/Contact";
 import AppointmentForm from "./pages/AppointmentForm";
 import Testimonials from "./pages/Testimonials";
+import Boarding from "./pages/Boarding";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/appointment-form" element={<AppointmentForm />} />
+        <Route path="/boarding" element = {<Boarding/>}/>
       </Routes>
     </Router>
   );
