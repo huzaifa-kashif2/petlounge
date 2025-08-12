@@ -1,61 +1,11 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/Home.module.css";
 import { Link } from "react-router-dom";
-import img1 from "../assets/home1.jpg";
-import img2 from "../assets/home2.jpg";
-import img3 from "../assets/home3.jpg";
-import img4 from "../assets/home4.jpg";
-import img5 from "../assets/home5.jpg";
-import img6 from "../assets/home6.jpg";
-
-const features = [
-  {
-    imgSrc: img1,
-    alt: "24/7 Care",
-    title: "24/7 Caretakers",
-    description:
-      "Round-the-clock care to keep tails wagging and whiskers twitching happily.",
-  },
-  {
-    imgSrc: img2,
-    alt: "On-Site Vet",
-    title: "On-Site Vet",
-    description:
-      "Immediate medical attention for peace of mind — your pet’s health comes first.",
-  },
-  {
-    imgSrc: img3,
-    alt: "Live Cameras",
-    title: "Live Camera Access",
-    description:
-      "Check in anytime through our secure camera feed to see your pet enjoying life.",
-  },
-  {
-    imgSrc: img4,
-    alt: "Spa Grooming",
-    title: "Luxury Spa Grooming",
-    description:
-      "From blueberry facials to pawdicures — because they deserve the royal treatment.",
-  },
-  {
-    imgSrc: img5,
-    alt: "Daily Updates",
-    title: "Daily Photo & Video Updates",
-    description: "Get a daily dose of cuteness straight to your phone.",
-  },
-  {
-    imgSrc: img6,
-    alt: "Play Areas",
-    title: "Indoor & Outdoor Play",
-    description:
-      "Spacious playgrounds for fetch, zoomies, and lazy afternoon naps.",
-  },
-];
 
 const funFacts = [
-  "🐶 Dogs sleep an average of 12–14 hours a day — perfect for our cozy suites.",
-  "🐱 Cats purr at a frequency that can promote healing — we provide the calmest spaces.",
-  "🦴 We bake our own organic pet treats — no preservatives, just love.",
+  "🐶 Dogs sleep an average of 12–14 hours a day - perfect for our cozy suites.",
+  "🐱 Cats purr at a frequency that can promote healing - we provide the calmest spaces.",
+  "🦴 We bake our own organic pet treats - no preservatives, just love.",
 ];
 
 const testimonials = [
@@ -69,6 +19,95 @@ const testimonials = [
     author: "Ali, Gulberg",
   },
 ];
+
+// Mini game component
+function CatchTheTreats() {
+  const [basketX, setBasketX] = useState(150);
+  const [treats, setTreats] = useState([]);
+  const [score, setScore] = useState(0);
+  const gameRef = useRef(null);
+  const animationRef = useRef(null);
+  const lastSpawnTime = useRef(0);
+
+  useEffect(() => {
+    const gameLoop = (timestamp) => {
+      if (timestamp - lastSpawnTime.current > 1000) {
+        setTreats((prev) => [
+          ...prev,
+          {
+            id: Date.now(),
+            x: Math.floor(Math.random() * 280),
+            y: 0,
+            type: Math.random() > 0.5 ? "bone" : "fish",
+          },
+        ]);
+        lastSpawnTime.current = timestamp;
+      }
+
+      setTreats((prev) =>
+        prev
+          .map((t) => {
+            const newY = t.y + 3;
+            const caught =
+              newY > 200 && t.x > basketX - 30 && t.x < basketX + 60;
+            if (caught) {
+              setScore((s) => s + 1);
+              return null;
+            }
+            return newY < 250 ? { ...t, y: newY } : null;
+          })
+          .filter(Boolean)
+      );
+
+      animationRef.current = requestAnimationFrame(gameLoop);
+    };
+
+    animationRef.current = requestAnimationFrame(gameLoop);
+    return () => cancelAnimationFrame(animationRef.current);
+  }, [basketX]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowLeft") {
+        setBasketX((prev) => Math.max(prev - 20, 0));
+      } else if (e.key === "ArrowRight") {
+        setBasketX((prev) => Math.min(prev + 20, 300));
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  useEffect(() => {
+    const gameArea = gameRef.current;
+    const handleTouchMove = (e) => {
+      const touch = e.touches[0];
+      const rect = gameArea.getBoundingClientRect();
+      const relativeX = touch.clientX - rect.left;
+      setBasketX(Math.max(0, Math.min(relativeX - 30, 300)));
+    };
+    gameArea?.addEventListener("touchmove", handleTouchMove);
+    return () => gameArea?.removeEventListener("touchmove", handleTouchMove);
+  }, []);
+
+  return (
+    <div className={styles.gameContainer} ref={gameRef}>
+      <h3>Catch the Treats 🐶🐱</h3>
+      <p>Score: {score}</p>
+      <div className={styles.gameArea}>
+        {treats.map((treat) => (
+          <div
+            key={treat.id}
+            className={`${styles.treat} ${styles[treat.type]}`}
+            style={{ left: treat.x, top: treat.y }}
+          ></div>
+        ))}
+        <div className={styles.basket} style={{ left: basketX }}></div>
+      </div>
+      <p className={styles.gameHint}>Use ⬅ ➡ or swipe to move</p>
+    </div>
+  );
+}
 
 const Home = () => {
   return (
@@ -99,17 +138,8 @@ const Home = () => {
         </div>
       </header>
 
-      <section className={styles.features}>
-        <h2>Why Choose Benny’s?</h2>
-        <div className={styles.featureGrid}>
-          {features.map(({ imgSrc, alt, title, description }, idx) => (
-            <div key={idx} className={styles.feature}>
-              <img src={imgSrc} alt={alt} />
-              <h3>{title}</h3>
-              <p>{description}</p>
-            </div>
-          ))}
-        </div>
+      <section>
+        <CatchTheTreats />
       </section>
 
       <section className={styles.funFacts}>
@@ -156,4 +186,3 @@ const Home = () => {
 };
 
 export default Home;
-

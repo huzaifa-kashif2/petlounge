@@ -1,7 +1,15 @@
 import React from "react";
 import styles from "../styles/Boarding.module.css";
-import boarding from "../assets/boarding1.jpg"
-import { FaVideo, FaStethoscope, FaClock, FaMobileAlt, FaCat, FaDog } from "react-icons/fa";
+import boarding from "../assets/boarding1.jpg";
+import {
+  FaVideo,
+  FaStethoscope,
+  FaClock,
+  FaMobileAlt,
+  FaCat,
+  FaDog,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Boarding = () => {
   return (
@@ -67,15 +75,19 @@ const Boarding = () => {
 
       {/* Image Section */}
       <div className={styles["boarding-image"]}>
-        <img
-          src={boarding}
-          alt="Happy pet in boarding suite"
-        />
+        <img src={boarding} alt="Happy pet in boarding suite" />
       </div>
 
       {/* Closing Section */}
       <footer className={styles["boarding-footer"]}>
         <p>We don’t just watch over your pets — we treat them like our own.</p>
+
+        {/* Book Me Button */}
+        <div className={styles["boarding-cta"]}>
+          <Link to="/appointment-form" className={styles["book-btn"]}>
+            🐾 Book Me
+          </Link>
+        </div>
       </footer>
     </div>
   );

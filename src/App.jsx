@@ -19,7 +19,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/grooming" element={<Services />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/paw-wall" element={<PawWall />} />
         <Route path="/tips" element={<TipsAndCare />} />

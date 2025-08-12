@@ -30,10 +30,14 @@ import img13 from "../assets/img13.jpg";
 import img14 from "../assets/img14.jpg";
 import img15 from "../assets/img15.jpg";
 import img16 from "../assets/img16.jpg";
+import img17 from "../assets/img17.jpg";
+import img18 from "../assets/img18.jpg";
+import img19 from "../assets/img19.jpg";
+import img20 from "../assets/img20.jpg";
 
 const ALL = [
   img1, img2, img3, img4, img5, img6, img7,
-  img8, img9, img10, img11, img12, img13, img14, img15, img16
+  img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20
 ];
 
 function pickSize() {

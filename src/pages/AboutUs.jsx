@@ -8,8 +8,9 @@ import {
   FaClock,
   FaBath,
   FaHome,
-  FaGraduationCap ,
+  FaGraduationCap,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -48,7 +49,7 @@ const features = [
     title: "Pet Wellness",
     description: "Nutritious meals, vet checks & activity-based health care.",
   },
-{
+  {
     icon: <FaGraduationCap className={styles["feature-icon"]} />,
     title: "Pet Training Sessions",
     description:
@@ -95,6 +96,13 @@ const AboutUs = () => {
             for a spa day or an extended stay, they’ll leave happier, healthier,
             and a little bit spoiled.
           </p>
+        </div>
+
+        {/* Book Now Button */}
+        <div className={styles["about-cta"]}>
+          <Link to="/appointment-form" className={styles["book-btn"]}>
+            📅 Book Now
+          </Link>
         </div>
       </div>
     </div>

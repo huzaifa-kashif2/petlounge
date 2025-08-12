@@ -45,8 +45,7 @@ export default function ContactForm() {
         phone. Thank you for choosing Benny’s Pet Lounge.
       </p>
       <p className={styles.notice}>
-        We are closed Sundays & Wednesdays. You can schedule an appointment as
-        early as 8:30 AM.
+        We're open 7 days a week, drop by anytime between 11 AM to 9 PM!
       </p>
 
       <form onSubmit={handleSubmit} className={styles.form}>
