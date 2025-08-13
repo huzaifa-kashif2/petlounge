@@ -11,6 +11,8 @@ export default function ContactForm() {
     timeHour: "",
     timeMin: "",
     timeAMPM: "",
+    numPets: "",
+    petType: "",
     petName: "",
     message: "",
   });
@@ -50,40 +52,105 @@ export default function ContactForm() {
 
       <form onSubmit={handleSubmit} className={styles.form}>
         <label>Name:*</label>
-        <input name="name" value={formData.name} onChange={handleChange} required />
+        <input
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
 
         <label>Phone:*</label>
-        <input name="phone" type="number" value={formData.phone} onChange={handleChange} required />
+        <input
+          name="phone"
+          type="number"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+        />
 
         <label>Email:*</label>
-        <input name="email" type="email" value={formData.email} onChange={handleChange} required />
+        <input
+          name="email"
+          type="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
 
         <label>Requested Date:*</label>
-        <input name="date" type="date" value={formData.date} onChange={handleChange} required />
+        <input
+          name="date"
+          type="date"
+          value={formData.date}
+          onChange={handleChange}
+          required
+        />
 
         <label>Requested Time:</label>
         <div className={styles.timeFields}>
-          <select name="timeHour" value={formData.timeHour} onChange={handleChange}>
-            {[...Array(12).keys()].map(i => (
+          <select
+            name="timeHour"
+            value={formData.timeHour}
+            onChange={handleChange}
+          >
+            {[...Array(12).keys()].map((i) => (
               <option key={i + 1}>{i + 1}</option>
             ))}
           </select>
-          <select name="timeMin" value={formData.timeMin} onChange={handleChange}>
-            {["00", "15", "30", "45"].map(min => (
+          <select
+            name="timeMin"
+            value={formData.timeMin}
+            onChange={handleChange}
+          >
+            {["00", "15", "30", "45"].map((min) => (
               <option key={min}>{min}</option>
             ))}
           </select>
-          <select name="timeAMPM" value={formData.timeAMPM} onChange={handleChange}>
+          <select
+            name="timeAMPM"
+            value={formData.timeAMPM}
+            onChange={handleChange}
+          >
             <option>AM</option>
             <option>PM</option>
           </select>
         </div>
+        <label>Number of Pets:</label>
+        <input
+          name="numPets"
+          type="number"
+          min="1"
+          value={formData.numPets || ""}
+          onChange={handleChange}
+          required
+        />
+
+        <label>Type of Pet:</label>
+        <select
+          name="petType"
+          value={formData.petType || ""}
+          onChange={handleChange}
+          required
+        >
+          <option value="">Select</option>
+          <option value="cat">Cat</option>
+          <option value="dog">Dog</option>
+        </select>
 
         <label>Name of Pet:</label>
-        <input name="petName" value={formData.petName} onChange={handleChange} />
+        <input
+          name="petName"
+          value={formData.petName}
+          onChange={handleChange}
+        />
 
         <label>Message:</label>
-        <textarea name="message" value={formData.message} onChange={handleChange} rows={4} />
+        <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          rows={4}
+        />
 
         <div className={styles.captcha}>
           <ReCAPTCHA

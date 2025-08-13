@@ -35,7 +35,7 @@ body {
 .heroContent h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color:rgb(255, 183, 38);
+  color: rgb(255, 183, 38);
 }
 
 .heroContent p {
@@ -67,55 +67,8 @@ body {
 }
 
 /* ===== Game Section ===== */
-.gameContainer {
-  background: #fff9f4;
-  padding: 15px;
-  border-radius: 12px;
-  text-align: center;
-  width: 350px;
-  margin: auto;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-}
 
-.gameArea {
-  position: relative;
-  width: 320px;
-  height: 250px;
-  background: #fce7d4;
-  border-radius: 10px;
-  margin: 0 auto;
-  overflow: hidden;
-  border: 2px solid #e6b17e;
-}
 
-.basket {
-  position: absolute;
-  bottom: 0;
-  width: 60px;
-  height: 20px;
-  background: #ff914d;
-  border-radius: 5px;
-}
-
-.treat {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  background-size: cover;
-}
-
-.bone {
-  background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
-}
-
-.fish {
-  background-image: url('https://cdn-icons-png.flaticon.com/512/616/616490.png');
-}
-
-.gameHint {
-  font-size: 12px;
-  color: #777;
-}
 
 /* ===== Fun Facts ===== */
 .funFacts {
@@ -164,13 +117,6 @@ body {
   text-align: center;
 }
 
-/* ===== Footer ===== */
-.footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
 .contactSnippet p {
   margin-bottom: 1rem;
 }
@@ -178,4 +124,37 @@ body {
 .contactSnippet .btn {
   margin-top: 0.5rem;
 }
- 
+
+/* ===== Footer ===== */
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ===== New Flex Wrapper for Game and Placeholder ===== */
+.gameAndPlaceholderWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.placeholderDiv {
+  width: 50%;      /* also half width */
+  background: #ffe8cc;
+  border: 2px dashed #ff7f50;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 75vh;
+  box-sizing: border-box;
+  color: #663300;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

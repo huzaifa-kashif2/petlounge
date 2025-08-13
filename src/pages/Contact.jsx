@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/Contact.module.css";
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.png";
 import {
   FaPhone,
   FaGlobe,
@@ -8,30 +8,30 @@ import {
   FaFacebook,
   FaEnvelope,
   FaLinkedin,
+  FaInstagram,
 } from "react-icons/fa";
 
 export default function Contact() {
   return (
     <section className={styles.contactCard}>
-      <img src={logo} alt="Logo" className={styles.logo} /> 
+      <img src={logo} alt="Logo" className={styles.logo} />
       <h2 className={styles.title}>Bennys Pets Lounge</h2>
 
       <div className={styles.info}>
         <p>
           <FaMapMarkerAlt className={styles.icon} />
-          V-11, Street 17, Sector V,<br />
+          V-11, Street 17, Sector V,
+          <br />
           DHA Phase 2, Lahore, 54792, Pakistan
         </p>
 
         <p>
-          <FaPhone className={styles.icon} /> 0321 1234567
+          <FaPhone className={styles.icon} /> 03070444055
         </p>
 
         <p>
           <FaEnvelope className={styles.icon} />
-          <a href="mailto:info@bennyspetlounge.com">
-            info@bennyspetlounge.com
-          </a>
+          <a href="mailto:info@bennyspetlounge.com">info@bennyspetlounge.com</a>
         </p>
 
         <p>
@@ -57,8 +57,14 @@ export default function Contact() {
         >
           <FaLinkedin className={styles.fbIcon} />
         </a>
+        <a
+          href="https://www.instagram.com/bennys_pets_lounge/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaInstagram className={styles.fbIcon} />
+        </a>
       </div>
-
       <div className={styles.mapContainer}>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6805.348647515624!2d74.40136627763954!3d31.47814386923759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391908ab93291a45%3A0xdaea234f9647e517!2sSector%20V%20DHA%20Phase%202%2C%20Lahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1754405397981!5m2!1sen!2s"

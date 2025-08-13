@@ -66,7 +66,7 @@ const AboutUs = () => {
         <h1 className={styles["about-title"]}>About Benny’s Pet Lounge 🐾</h1>
         <p className={styles["about-intro"]}>
           At <strong>Benny’s Pet Lounge</strong>, we believe every tail wag and
-          purr deserves the finest care. As Pakistan’s *first luxury pet hotel*
+          purr deserves the finest care. As Pakistan’s <strong>first luxury pet hotel </strong>
           and grooming haven, we’ve built a space where pets aren’t just guests
           — they’re family.
         </p>

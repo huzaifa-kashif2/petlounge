@@ -204,8 +204,8 @@ export default function PawWall() {
 
   const tiles = visibleItems();
 
-  return (
-    <div className={styles.outerWrap} aria-live="polite">
+  return (<div className={`${styles.outerWrap}`} aria-live="polite">
+
       <div className={styles.toolbar}>
         <div className={styles.leftControls}>
           <button className={styles.toolBtn} onClick={shuffle}><FaRandom /> Shuffle</button>
