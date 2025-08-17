@@ -98,7 +98,6 @@ const AboutUs = () => {
           </p>
         </div>
 
-        {/* Book Now Button */}
         <div className={styles["about-cta"]}>
           <Link to="/appointment-form" className={styles["book-btn"]}>
             📅 Book Now

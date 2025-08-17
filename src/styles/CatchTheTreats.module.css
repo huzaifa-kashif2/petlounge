@@ -1,23 +1,25 @@
 .gameContainer {
-  background: #fff9f4;
+  background: var(--game-bg);
   padding: 15px;
   border-radius: 12px;
   text-align: center;
-  width: 50%;      /* changed from fixed 350px */
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  width: 50%;
+  box-shadow: 0px 4px 10px var(--light-shadow);
   box-sizing: border-box;
+  margin: auto;
 }
 
 .gameArea {
   position: relative;
   width: 320px;
   height: 250px;
-  background: #fce7d4;
+  background: var(--game-area-bg);
   border-radius: 10px;
   margin: 0 auto;
   overflow: hidden;
-  border: 2px solid #e6b17e;
+  border: 2px solid var(--game-area-border);
 }
+
 .treat {
   position: absolute;
   width: 25px;
@@ -30,13 +32,15 @@
   bottom: 0;
   width: 60px;
   height: 20px;
-  background: #ff914d;
+  background: var(--basket-color);
   border-radius: 5px;
 }
+
 .gameHint {
   font-size: 12px;
-  color: #777;
+  color: var(--text-lighter);
 }
+
 .bone {
   background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
 }
@@ -45,4 +49,32 @@
   background-image: url('https://cdn-icons-png.flaticon.com/512/616/616490.png');
 }
 
+@media (max-width: 1024px) {
+  .gameContainer {
+    width: 70%;
+  }
+}
 
+@media (max-width: 768px) {
+  .gameContainer {
+    width: 90%;
+  }
+  .gameArea {
+    width: 260px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameArea {
+    width: 220px;
+    height: 180px;
+  }
+  .basket {
+    width: 50px;
+  }
+  .treat {
+    width: 20px;
+    height: 20px;
+  }
+}

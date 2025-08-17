@@ -21,7 +21,6 @@ export default function TipsAndCare() {
         Your ultimate guide to keeping your furry friends happy, healthy, and pampered.
       </p>
 
-      {/* Grooming Section */}
       <section className={styles.grooming}>
         <div className={styles.card}>
           <h2>🐶 Dog Grooming Tips</h2>
@@ -44,7 +43,6 @@ export default function TipsAndCare() {
         </div>
       </section>
 
-      {/* Quick Care Cards */}
       <section className={styles.quickCare}>
         <h2>💡 Quick Care Cards</h2>
         <div className={styles.careGrid}>
@@ -55,7 +53,6 @@ export default function TipsAndCare() {
         </div>
       </section>
 
-      {/* Pet Myth Buster */}
       <section className={styles.mythBuster}>
         <h2>🔍 Pet Myth Buster</h2>
         <div className={styles.mythBox}>
@@ -65,7 +62,6 @@ export default function TipsAndCare() {
         </div>
       </section>
 
-      {/* Seasonal Tips */}
       <section className={styles.seasonal}>
         <h2>🌦 Seasonal Care Tips</h2>
         <div className={styles.card}>

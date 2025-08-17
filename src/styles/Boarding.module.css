@@ -1,12 +1,11 @@
-.boarding-container {
+.boardingContainer {
   font-family: 'Poppins', sans-serif;
   padding: 2rem;
   background: linear-gradient(135deg, #fff8f0, #ffe4d1);
   color: #333;
 }
 
-/* Header */
-.boarding-header {
+.boardingHeader {
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -23,8 +22,7 @@
   margin-top: 0.5rem;
 }
 
-/* Intro */
-.boarding-intro {
+.boardingIntro {
   text-align: center;
   max-width: 700px;
   margin: auto;
@@ -32,8 +30,7 @@
   margin-bottom: 3rem;
 }
 
-/* Tabs Section */
-.boarding-tabs {
+.boardingTabs {
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -41,7 +38,7 @@
   flex-wrap: wrap;
 }
 
-.tab-card {
+.tabCard {
   background: white;
   padding: 1.5rem;
   border-radius: 15px;
@@ -51,30 +48,29 @@
   transition: transform 0.3s ease;
 }
 
-.tab-card:hover {
+.tabCard:hover {
   transform: scale(1.05);
 }
 
-.tab-icon {
+.tabIcon {
   font-size: 3rem;
   color: #ff6f3c;
   margin-bottom: 1rem;
 }
 
-/* Features Section */
-.boarding-features {
+.boardingFeatures {
   margin-bottom: 3rem;
   text-align: center;
 }
 
-.features-grid {
+.featuresGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
 }
 
-.feature-item {
+.featureItem {
   background: white;
   padding: 1rem;
   border-radius: 12px;
@@ -84,36 +80,34 @@
   box-shadow: 0px 5px 15px rgba(0,0,0,0.08);
 }
 
-.feature-icon {
+.featureIcon {
   font-size: 1.8rem;
   color: #ff6f3c;
 }
 
-/* Image Section */
-/* Image Section */
-.boarding-image {
+.boardingImage {
   position: relative;
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.boarding-image img {
-  max-width: 50%; /* smaller width */
-  height: auto; /* maintain proportions */
+.boardingImage img {
+  max-width: 50%;
+  height: auto;
   border-radius: 20px;
   box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
   border: 5px solid #fff;
-  outline: 2px solid #ff6f3c; /* Brand-colored outline */
+  outline: 2px solid #ff6f3c;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  animation: floatImage 6s ease-in-out infinite; /* subtle animation */
+  animation: floatImage 6s ease-in-out infinite;
 }
 
-.boarding-image img:hover {
+.boardingImage img:hover {
   transform: scale(1.05) translateY(-5px);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
 }
-/* Footer */
-.boarding-footer {
+
+.boardingFooter {
   text-align: center;
   font-style: italic;
   font-size: 1.2rem;
@@ -121,23 +115,12 @@
   margin-top: 1rem;
 }
 
-/* Animations */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.boarding-cta {
+.boardingCta {
   text-align: center;
   margin-top: 20px;
 }
 
-.book-btn {
+.bookBtn {
   display: inline-block;
   background: linear-gradient(45deg, #ff7f50, #ff4e50);
   color: white;
@@ -150,11 +133,48 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.book-btn:hover {
+.bookBtn:hover {
   background: linear-gradient(45deg, #ff4e50, #ff7f50);
   transform: scale(1.05);
 }
 
-.book-btn:active {
+.bookBtn:active {
   transform: scale(0.95);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 1024px) {
+  .headline { font-size: 2.2rem; }
+  .boardingImage img { max-width: 65%; }
+}
+
+@media (max-width: 768px) {
+  .boardingContainer { padding: 1.5rem; }
+  .headline { font-size: 2rem; }
+  .subheadline { font-size: 1.1rem; }
+  .boardingImage img { max-width: 80%; }
+}
+
+@media (max-width: 480px) {
+  .headline { font-size: 1.6rem; }
+  .subheadline { font-size: 1rem; }
+  .boardingIntro { font-size: 1rem; }
+  .tabCard { width: 100%; }
+  .boardingImage img { max-width: 100%; }
+  .bookBtn { font-size: 1rem; padding: 10px 20px; }
 }

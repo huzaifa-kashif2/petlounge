@@ -84,9 +84,74 @@
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ctaButton:hover {
   background: #9a7353;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+@media (hover: none) {
+  .serviceCard:active {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+  .servicesGrid {
+    gap: 1.5rem;
+    padding: 2rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 3rem 1rem 1.5rem;
+  }
+  .header h1 {
+    font-size: 2rem;
+  }
+  .header p {
+    font-size: 1rem;
+  }
+  .serviceCard {
+    padding: 1.5rem;
+  }
+  .ctaSection h2 {
+    font-size: 1.6rem;
+  }
+  .ctaSection p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  .header p {
+    font-size: 0.95rem;
+  }
+  .serviceCard {
+    padding: 1.2rem;
+  }
+  .serviceCard h2 {
+    font-size: 1.1rem;
+  }
+  .serviceCard p {
+    font-size: 0.9rem;
+  }
+  .ctaSection h2 {
+    font-size: 1.4rem;
+  }
+  .ctaButton {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.5rem;
+  }
 }

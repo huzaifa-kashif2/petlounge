@@ -13,7 +13,7 @@
   background-size: cover;
   background-position: center;
   z-index: -1;
-  opacity: 0.2; /* Adjust based on your image */
+  opacity: 0.2;
 }
 
 .about-content {
@@ -43,7 +43,7 @@
 
 .about-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 25px;
   margin-bottom: 50px;
 }
@@ -84,6 +84,7 @@
   font-size: 1.1rem;
   color: #555;
 }
+
 .about-cta {
   text-align: center;
   margin-top: 30px;
@@ -110,3 +111,34 @@
 .book-btn:active {
   transform: scale(0.95);
 }
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2.2rem;
+  }
+  .about-intro {
+    font-size: 1.1rem;
+  }
+  .about-desc {
+    font-size: 1rem;
+  }
+  .about-features {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.8rem;
+  }
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+  .about-intro,
+  .about-desc,
+  .about-mission p {
+    font-size: 0.95rem;
+  }
+}
+  

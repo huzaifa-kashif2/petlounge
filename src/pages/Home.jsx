@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/Home.module.css";
 import { Link } from "react-router-dom";
 import { CatchTheTreats } from "../components/CatchTheTreats";
+import video from "../assets/video.mp4";
+import PawWall from "./PawWall";
 
 const funFacts = [
   "🐶 Dogs sleep an average of 12–14 hours a day - perfect for our cozy suites.",
@@ -21,30 +23,64 @@ const testimonials = [
   },
 ];
 
-
-
 const Home = () => {
   return (
     <>
       <header className={styles.hero}>
         <div className={styles.overlay}></div>
         <div className={styles.heroContent}>
-          <h1>Where Every Paw Feels at Home 🐾</h1>
-          <p>Welcome to Benny’s Pet Lounge — Pakistan’s first purpose-built pet hotel and grooming haven. Whether your furry friend is here for a cozy stay or a pampering spa day, we promise love, comfort, and care every step of the way. With 24/7 caretakers, on-site vets, camera access for owners, and daily updates, you can relax knowing your pet is happy, safe, and living their best life.</p>
+          <h1>Where Every Paw Feels at Home</h1>
+          <p>
+            Welcome to Benny’s Pet Lounge — Pakistan’s first purpose-built pet
+            hotel and grooming haven. 
+          </p>
           <div className={styles.ctaButtons}>
-            <Link to="/boarding" className={`${styles.btn} ${styles.primary}`}>Book Boarding</Link>
-            <Link to="/grooming" className={`${styles.btn} ${styles.secondary}`}>Book Grooming</Link>
+            <div className={styles.btnRow}>
+              <Link
+                to="/boarding"
+                className={`${styles.btn} ${styles.primary}`}
+              >
+                Book Boarding
+              </Link>
+              <Link
+                to="/grooming"
+                className={`${styles.btn} ${styles.secondary}`}
+              >
+                Book Grooming
+              </Link>
+            </div>
+
+            <div className={styles.btnRow}>
+              <Link
+                to="/appointment-form"
+                className={`${styles.btn} ${styles.primary}`}
+              >
+                Appointment Form
+              </Link>
+              <Link
+                to="/testimonials"
+                className={`${styles.btn} ${styles.secondary}`}
+              >
+                Testimonials
+              </Link>
+            </div>
           </div>
         </div>
       </header>
 
-      {/* NEW WRAPPER */}
       <section className={styles.gameAndPlaceholderWrapper}>
         <CatchTheTreats />
         <div className={styles.placeholderDiv}>
-          {/* Temporary placeholder for your future component */}
-          <h3>Future Component Placeholder</h3>
-          <p>This space is reserved for your upcoming content.</p>
+          <div className={styles.videoContainer}>
+            <video
+              src={video}
+              controls
+              autoPlay={false}
+              loop
+              muted
+              style={{ width: "100%", height: "60vh", borderRadius: "12px" }}
+            />
+          </div>
         </div>
       </section>
 
@@ -68,14 +104,20 @@ const Home = () => {
       </section>
 
       <div className={styles.testimonialButton}>
-        <Link to="/testimonials" className={`${styles.btn} ${styles.secondary}`}>
+        <Link
+          to="/testimonials"
+          className={`${styles.btn} ${styles.secondary}`}
+        >
           See what others say
         </Link>
       </div>
+      <section className={styles.pawWallSection}>
+        <PawWall />
+      </section>
 
       <section className={styles.contactSnippet}>
         <h2>Book Your Pet’s Stay Today!</h2>
-        <p>📍 DHA Phase 5, Lahore | 📞 0300-1234567</p>
+        <p>📍 DHA Phase 2, Lahore | 📞 0307 0444055</p>
         <Link to="/contact" className={`${styles.btn} ${styles.primary}`}>
           Contact Us
         </Link>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import styles from "../styles/CatchTheThreats.module.css"; // or your relevant CSS module path
+import styles from "../styles/CatchTheTreats.module.css"; // or your relevant CSS module path
 
 export function CatchTheTreats() {
   const [basketX, setBasketX] = useState(150);

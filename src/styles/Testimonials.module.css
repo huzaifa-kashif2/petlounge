@@ -104,3 +104,58 @@ body {
   font-size: 1.5rem;
   color: #ff69b4;
 }
+
+@media (max-width: 1024px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  .searchBox input {
+    width: 250px;
+  }
+  .testimonial {
+    margin-left: 2rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  .paw {
+    font-size: 1.2rem;
+  }
+  .searchBox input {
+    width: 220px;
+    font-size: 0.9rem;
+  }
+  .testimonial {
+    margin: 1rem auto;
+    max-width: 95%;
+    margin-left: auto;
+  }
+  .carousel {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  .paw {
+    font-size: 1rem;
+  }
+  .searchBox input {
+    width: 180px;
+    font-size: 0.85rem;
+  }
+  .testimonial {
+    padding: 0.8rem;
+    margin: 1rem auto;
+    max-width: 100%;
+  }
+  .writeReview {
+    padding: 1rem;
+  }
+}

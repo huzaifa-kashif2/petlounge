@@ -1,13 +1,39 @@
 :root {
-  --primary-color: #FAF7F3;
-  --secondary-color: #F0E4D3;
-  --accent-color: #D9A299;
-  --text-color: #333333;
-  --background-color: #DCC5B2;
-  --border-color: #dcc5b2;
+  --primary-color: #fff;
+  --secondary-color: #fff;
+  --accent-color: #ff6f61;
+  --accent-color-alt: #ff6f3c;
+  --accent-gradient-start: #ff7f50;
+  --accent-gradient-end: #ff4e50;
+
+  --text-color: #333;
+  --text-light: #444;
+  --text-lighter: #555;
+
+  --about-bg-color: rgba(255, 255, 255, 0.95);
+  --mission-bg-color: #fff8f6;
+  --boarding-bg-start: #fff8f0;
+  --boarding-bg-end: #ffe4d1;
+  --game-bg: #fff9f4;
+  --game-area-bg: #fce7d4;
+
+  --border-color: #ccc;
+  --mission-border-color: var(--accent-color);
+  --game-area-border: #e6b17e;
+
+  --basket-color: #ff914d;
+  --facebook-color: #3b5998;
+  --hover-accent: #b97e6d;
+  --light-shadow: rgba(0, 0, 0, 0.1);
+  --medium-shadow: rgba(0, 0, 0, 0.15);
 }
+
 
 
 body{
   margin:0px;
+}
+::selection {
+  background-color: #f7d9a8;
+  color: #2c3e50; 
 }
