@@ -24,7 +24,7 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch("https://petlounge-be.vercel.app/api/form", {
+    const res = await fetch("https://petloungebe-production.up.railway.app/api/form", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
