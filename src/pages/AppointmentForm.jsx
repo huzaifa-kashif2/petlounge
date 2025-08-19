@@ -28,16 +28,48 @@ export default function ContactForm() {
     setCaptchaValue(value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    if (!captchaValue) {
-      alert("Please complete the CAPTCHA.");
-      return;
+  if (!captchaValue) {
+    alert("Please complete the CAPTCHA.");
+    return;
+  }
+
+  try {
+    const res = await fetch("https://petlounge-be.vercel.app/api/form", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      alert("✅ Form submitted successfully!");
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        date: "",
+        timeHour: "",
+        timeMin: "",
+        timeAMPM: "",
+        numPets: "",
+        petType: "",
+        petName: "",
+        message: "",
+      });
+      recaptchaRef.current.reset();
+      setCaptchaValue(null);
+    } else {
+      alert("❌ Failed to submit form. Please try again.");
     }
-
-    alert("Form submitted!");
-  };
+  } catch (error) {
+    console.error(error);
+    alert("❌ Server error. Please try again later.");
+  }
+};
 
   return (
     <section className={styles.container}>
