@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import styles from "../styles/AppointmentForm.module.css";
 
 export default function ContactForm() {
@@ -17,24 +16,12 @@ export default function ContactForm() {
     message: "",
   });
 
-  const [captchaValue, setCaptchaValue] = useState(null);
-  const recaptchaRef = useRef();
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleCaptchaChange = (value) => {
-    setCaptchaValue(value);
-  };
-
 const handleSubmit = async (e) => {
   e.preventDefault();
-
-  if (!captchaValue) {
-    alert("Please complete the CAPTCHA.");
-    return;
-  }
 
   try {
     const res = await fetch("https://petlounge-be.vercel.app/api/form", {
@@ -60,8 +47,6 @@ const handleSubmit = async (e) => {
         petName: "",
         message: "",
       });
-      recaptchaRef.current.reset();
-      setCaptchaValue(null);
     } else {
       alert("❌ Failed to submit form. Please try again.");
     }
@@ -183,14 +168,6 @@ const handleSubmit = async (e) => {
           onChange={handleChange}
           rows={4}
         />
-
-        <div className={styles.captcha}>
-          <ReCAPTCHA
-            sitekey="6LeygpsrAAAAAHN2_rkPPwsLGmrsYmSwwpYyYzom"
-            onChange={handleCaptchaChange}
-            ref={recaptchaRef}
-          />
-        </div>
 
         <button type="submit">Submit</button>
       </form>
