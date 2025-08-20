@@ -32,7 +32,7 @@ const Home = () => {
           <h1>Where Every Paw Feels at Home</h1>
           <p>
             Welcome to Benny’s Pet Lounge — Pakistan’s first purpose-built pet
-            hotel and grooming haven. 
+            hotel and grooming haven.
           </p>
           <div className={styles.ctaButtons}>
             <div className={styles.btnRow}>
@@ -117,10 +117,30 @@ const Home = () => {
 
       <section className={styles.contactSnippet}>
         <h2>Book Your Pet’s Stay Today!</h2>
-        <p>📍 DHA Phase 2, Lahore | 📞 0307 0444055</p>
-        <Link to="/contact" className={`${styles.btn} ${styles.primary}`}>
-          Contact Us
-        </Link>
+<p className={styles.contactInfo}>
+  📍 DHA Phase 2, Lahore | 📞{" "}
+  <a href="tel:+923070444055" className={styles.contactLink}>
+    0307 0444055
+  </a>{" "}
+  | <span className={styles.emailIcon}>📧</span>{" "}
+  <a
+    href="mailto:info@bennyspetslounge.com"
+    className={styles.contactLink}
+  >
+    info@bennyspetslounge.com
+  </a>
+</p>
+        <div className={styles.btnRow}>
+          <Link to="/contact" className={`${styles.btn} ${styles.primary}`}>
+            Contact Us
+          </Link>
+          <a
+            href="mailto:info@bennyspetslounge.com?subject=Booking%20Inquiry&body=Hello%20Benny's%20Pet%20Lounge%2C%0A%0AI%20would%20like%20to%20book%20a%20service%20for%20my%20pet."
+            className={`${styles.btn} ${styles.secondary}`}
+          >
+            Email Us
+          </a>
+        </div>
       </section>
 
       <footer className={styles.footer}>
