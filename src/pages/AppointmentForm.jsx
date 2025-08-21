@@ -27,7 +27,6 @@ export default function ContactForm() {
     let sendSuccess = false;
 
     try {
-      // 1️⃣ Save to MongoDB
       const saveRes = await fetch(
         "https://petloungebe-production.up.railway.app/api/save",
         {
@@ -44,7 +43,6 @@ export default function ContactForm() {
     }
 
     try {
-      // 2️⃣ Send WhatsApp via Twilio
       const sendRes = await fetch(
         "https://petloungebe-production.up.railway.app/api/send",
         {
@@ -60,7 +58,6 @@ export default function ContactForm() {
       console.error("❌ Twilio error:", err);
     }
 
-    // 3️⃣ Combined feedback
     if (saveSuccess && sendSuccess) {
       alert("✅ Form saved and WhatsApp sent successfully!");
       setFormData({

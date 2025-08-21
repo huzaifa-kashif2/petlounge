@@ -73,7 +73,6 @@ body {
 .primary:hover{
     background-color: #ff7f50;
   color: white;
-
 }
 
 .primary:hover,
@@ -235,6 +234,8 @@ body {
   .btnRow {
     flex-direction: column;
     gap: 0.8rem;
+    justify-content: center;  
+    align-items: center;     
   }
   .placeholderDiv {
     width: 100%;
@@ -244,6 +245,7 @@ body {
     height: auto;
   }
 }
+
 .contactInfo {
   font-size: 1rem;
   color: #333;
